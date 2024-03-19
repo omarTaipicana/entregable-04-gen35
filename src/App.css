@@ -1,0 +1,9 @@
+.app__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+

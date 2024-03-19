@@ -8,7 +8,7 @@ function App() {
   const BASEURL = "https://users-crud.academlo.tech";
   const PATH = "/users/";
   const [userEdit, setUserEdit] = useState();
-  const [formIsClouse, setFormIsClouse] = useState(false)
+  const [formIsClouse, setFormIsClouse] = useState(false);
   const [
     users,
     getUser,
@@ -27,8 +27,10 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1 className="app__title">USER CRUD</h1>
-        <button onClick={()=> setFormIsClouse(false)} className="form__btn">Crear un Nuevo Usuario</button>
+        <h1 className="app__title">Usuarios</h1>
+        <button onClick={() => setFormIsClouse(false)} className="app__btn">
+          + Crear Nuevo Usuario
+        </button>
       </header>
       <FormUser
         path={PATH}
@@ -39,15 +41,17 @@ function App() {
         formIsClouse={formIsClouse}
         setFormIsClouse={setFormIsClouse}
       />
-      {users?.map((user) => (
-        <CardUser
-          user={user}
-          key={user.id}
-          deleteUser={deleteUser}
-          path={PATH}
-          setUserEdit={setUserEdit}
-        />
-      ))}
+      <div className="card__content">
+        {users?.map((user) => (
+          <CardUser
+            user={user}
+            key={user.id}
+            deleteUser={deleteUser}
+            path={PATH}
+            setUserEdit={setUserEdit}
+          />
+        ))}
+      </div>
     </div>
   );
 }
