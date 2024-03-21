@@ -1,12 +1,13 @@
 import "../styles/CardUsers.css";
 
-const CardUser = ({ user, deleteUser, path, setUserEdit }) => {
+const CardUser = ({ user, deleteUser, path, setUserEdit, setFormIsClouse }) => {
   const handleDelete = () => {
     deleteUser(path, user.id);
   };
 
   const handleEditUser = () => {
     setUserEdit(user);
+    setFormIsClouse(false)
   };
 
   return (
@@ -21,11 +22,20 @@ const CardUser = ({ user, deleteUser, path, setUserEdit }) => {
         </li>
         <li>
           <span className="card__label">CUMPLEAÑOS</span>
+          <img className="card__img__birthday" src="./birthday.png" alt="" />
           <span className="card__value">{user?.birthday}</span>
         </li>
-      
-        <button className="card__btn" onClick={handleDelete}> <img className="card__btn__img" src="./delete.png" alt="" /></button>
-        <button className="card__btn" onClick={handleEditUser}><img className="card__btn__img" src="./edit.png" alt="" /></button>
+        <hr className="card__hr" />
+
+        <div className="card__btn__content">
+          <button className="card__btn" onClick={handleDelete}>
+            {" "}
+            <img className="card__btn__img" src="./delete2.png" alt="" />
+          </button>
+          <button className="card__btn" onClick={handleEditUser}>
+            <img className="card__btn__img" src="./edit.png" alt="" />
+          </button>
+        </div>
       </ul>
     </article>
   );

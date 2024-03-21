@@ -8,7 +8,7 @@ function App() {
   const BASEURL = "https://users-crud.academlo.tech";
   const PATH = "/users/";
   const [userEdit, setUserEdit] = useState();
-  const [formIsClouse, setFormIsClouse] = useState(false);
+  const [formIsClouse, setFormIsClouse] = useState(true);
   const [
     users,
     getUser,
@@ -49,6 +49,7 @@ function App() {
             deleteUser={deleteUser}
             path={PATH}
             setUserEdit={setUserEdit}
+            setFormIsClouse={setFormIsClouse}
           />
         ))}
       </div>
