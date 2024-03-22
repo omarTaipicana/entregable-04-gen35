@@ -16,8 +16,10 @@ const FormUser = ({
     if (userEdit) {
       updateUser(path, userEdit.id, data);
       setUserEdit();
+      setFormIsClouse(true)
     } else {
       createUser(path, data);
+      setFormIsClouse(true)
     }
     reset({
       email: "",
