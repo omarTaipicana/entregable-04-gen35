@@ -44,10 +44,10 @@ const FormUser = ({
             ❌
           </div>
         </header>
-
         <label className="form__label" htmlFor="">
           <span className="form__field">Nombre</span>
           <input
+            placeholder="Escriba sus nombres"
             className="form__field__value"
             {...register("first_name")}
             type="text"
@@ -56,6 +56,7 @@ const FormUser = ({
         <label className="form__label" htmlFor="">
           <span className="form__field">Apellidos</span>
           <input
+            placeholder="Escriba sus apellidos"
             className="form__field__value"
             {...register("last_name")}
             type="text"
@@ -64,6 +65,7 @@ const FormUser = ({
         <label className="form__label" htmlFor="">
           <span className="form__field">Correo</span>
           <input
+            placeholder="Escriba su correo electrónico"
             className="form__field__value"
             {...register("email")}
             type="email"
@@ -72,6 +74,7 @@ const FormUser = ({
         <label className="form__label" htmlFor="">
           <span className="form__field">Contraseña</span>
           <input
+            placeholder="Escriba una contraseña con numero letras y símbolos"
             className="form__field__value"
             {...register("password")}
             type="password"

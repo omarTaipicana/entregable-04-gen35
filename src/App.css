@@ -7,3 +7,10 @@
   padding: 1rem 3rem;
 }
 
+
+@media (max-width: 600px) {
+  .app__header {
+ 
+    padding: 1rem 1.5rem;
+  }
+}

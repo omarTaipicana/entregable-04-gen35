@@ -25,9 +25,9 @@
   opacity: 0.5;
 }
 
-.card__value{
-  vertical-align: center;
-  height: 3rem;
+.card__value {
+  display: flex;
+  align-content: center;
 }
 
 .card__hr {
@@ -45,7 +45,6 @@
   width: 2rem;
   padding-top: 0.3rem;
 }
- 
 
 .card__img__birthday {
   width: 1.5rem;

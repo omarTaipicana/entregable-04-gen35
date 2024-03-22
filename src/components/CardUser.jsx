@@ -7,7 +7,7 @@ const CardUser = ({ user, deleteUser, path, setUserEdit, setFormIsClouse }) => {
 
   const handleEditUser = () => {
     setUserEdit(user);
-    setFormIsClouse(false)
+    setFormIsClouse(false);
   };
 
   return (
@@ -22,8 +22,10 @@ const CardUser = ({ user, deleteUser, path, setUserEdit, setFormIsClouse }) => {
         </li>
         <li>
           <span className="card__label">CUMPLEAÑOS</span>
-          <img className="card__img__birthday" src="./birthday.png" alt="" />
-          <span className="card__value">{user?.birthday}</span>
+          <span className="card__value">
+            <img className="card__img__birthday" src="./birthday.png" alt="" />
+            {user?.birthday}
+          </span>
         </li>
         <hr className="card__hr" />
 

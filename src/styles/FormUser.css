@@ -2,10 +2,13 @@
   transform: scale(0);
 }
 
+
+
 .form__continer {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
   width: 100%;
   min-height: 100vh;
   background-color: #0003;
@@ -34,6 +37,7 @@
 
 .form__title {
   text-align: center;
+  margin-top: 0.5rem;
   margin-bottom: 0.8rem;
   font-weight: 400;
   font-size: 1.3rem;
@@ -65,12 +69,12 @@
   margin-top: 1.5em;
   font-size: 1rem;
   padding: 0.3em 1em;
-  background-color: rgb(148, 130, 130);
+  background-color: rgb(1, 1, 48);
   border: none;
-  border-radius: 0.5em;
+  border-radius: 0.1em;
   color: white;
   text-align: center;
   &:hover {
     filter: brightness(1.2);
   }
-}
+} 
